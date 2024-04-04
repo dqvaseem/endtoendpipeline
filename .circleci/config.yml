@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: aakibkhan1212/building-on-ci
+      IMAGE_NAME: vakram589/building-on-ci
     docker:
       - image: circleci/buildpack-deps:stretch
 jobs:
@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Publish Docker Image to Docker Hub
           command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "vakram589" | docker login -u "Dqvaseem@143" --password-stdin
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
